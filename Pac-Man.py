@@ -504,7 +504,7 @@ def gameover():  # obrazovka po konci hry
             anchor_y="center",
             x=540,
             y=537,
-        )  # text s časem hráče v případě, že sekundy jsou jednociferné
+        )  # text s časem hráče v případě, že sekundy jsou dvojciferné
 
         show_time_low.color = show_time_high.color = (0, 255, 98, 255)
 
@@ -515,7 +515,7 @@ def gameover():  # obrazovka po konci hry
             show_score.draw()
             if game_time_sec < 10:  # pokud jsou sekundy jednociferné
                 show_time_low.draw()
-            else:  # pokud jsou sekundy dvouciferné
+            else:  # pokud jsou sekundy dvojciferné
                 show_time_high.draw()
         else:  # vykreslení obrazovky, pokud hráč prohrál
             defeat = pyglet.image.load("defeat_screen.png")
